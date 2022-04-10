@@ -35,6 +35,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaType
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.asRequestBody
 import org.tensorflow.lite.support.image.TensorImage
 import org.tensorflow.lite.task.vision.detector.ObjectDetector
@@ -91,6 +92,7 @@ class HomeFragment : Fragment() {
     private var uploadLat: String = ""
     private var uploadLng: String = ""
     private var uploadDate: String = ""
+    private var uploadImg: ByteArray? = null
     /*-------------------------------------------------------------------*/
     private lateinit var imgPhoto: ImageView
     private lateinit var btnCamera: Button
@@ -330,6 +332,7 @@ class HomeFragment : Fragment() {
                     uploadLat,
                     uploadLng))
                 uploadName = name
+                uploadImg = bitmapdata
                 btnUpload.isEnabled = true
             }
             loading.dialog.dismiss()
@@ -411,7 +414,7 @@ class HomeFragment : Fragment() {
                                 .addFormDataPart(
                                     "imageFile",
                                     imageName,
-                                    File(currentPhotoPath).asRequestBody("image/jpg".toMediaType())
+                                    RequestBody.create("image/jpeg".toMediaTypeOrNull(), uploadImg!!)
                                 )
                                 .build()
                             val req = Request.Builder()
