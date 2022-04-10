@@ -3,8 +3,18 @@
 
 開發深度學習模型，同時開發手機App及網頁伺服器。手機app主要功能為辨識雲科的生物，並將辨識出的資料及圖片傳送到網站。網站接收手機的資料及圖片後，可用於地圖顯示當下拍攝時間地點及種類。
 
+## 系統架構
+
+<img src="https://github.com/DDPlay123/Yuntech-Android-Project/blob/main/image/system.png" width="500"/>
+
 ## 深度學習模型
 使用TensorFlow訓練物件辨識(Object Detection)模型，再轉檔成TFLite給Android使用。
+
+<img src="https://github.com/DDPlay123/Yuntech-Android-Project/blob/main/image/trainFlow.png" width="500"/>
+
+## 訓練結果
+
+<img src="https://github.com/DDPlay123/Yuntech-Android-Project/blob/main/image/trainResult.png" width="500"/>
 
 ## 首頁
 <img src="https://github.com/DDPlay123/Yuntech-Android-Project/blob/main/image/1.png" width="200"/>
