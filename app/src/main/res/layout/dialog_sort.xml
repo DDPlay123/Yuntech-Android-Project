@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@drawable/bounding"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/relativeLayout"
+        android:orientation="vertical"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:text="@string/sort"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:background="@color/deep_yuntech"/>
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <Button
+                android:id="@+id/btn_recent"
+                android:text="@string/recent"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textColor="#555555"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:background="@drawable/corner_btn2"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/yuntech"/>
+
+            <Button
+                android:id="@+id/btn_latest"
+                android:text="@string/latest"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textColor="#555555"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:background="@drawable/corner_btn2"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/yuntech"/>
+
+            <Button
+                android:id="@+id/btn_type"
+                android:text="@string/type"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textColor="#555555"
+                android:textSize="30sp"
+                android:gravity="center"
+                android:background="@drawable/corner_btn2"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
